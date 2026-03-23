@@ -372,7 +372,7 @@ export default function Home() {
                 {EMAIL}
               </p>
               <p className="text-white/50 text-sm mt-2">
-                We&apos;ll respond promptly
+                We respond within 24 hours
               </p>
             </a>
           </div>

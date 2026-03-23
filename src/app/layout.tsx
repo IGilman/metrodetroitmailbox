@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://metrodetroitmailboxinstall.com",
+    canonical: "https://metrodetroitmailbox.com",
   },
   icons: {
     icon: "/favicon.svg",
