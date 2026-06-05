@@ -97,6 +97,7 @@ export default function RootLayout({
               description:
                 "Professional mailbox installation and repair services in Metro Detroit.",
               url: "https://metrodetroitmailbox.com",
+              image: "https://metrodetroitmailbox.com/og-image.png",
               telephone: "+1-734-655-0305",
               email: "metrodetroitmailbox@gmail.com",
               priceRange: "$$",
