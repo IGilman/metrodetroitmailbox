@@ -12,15 +12,21 @@ export const metadata: Metadata = {
     "mailbox repair",
     "Metro Detroit mailbox",
     "mailbox installer near me",
-    "Royal Oak mailbox installation",
-    "Birmingham mailbox repair",
     "Troy mailbox installation",
-    "Bloomfield Hills mailbox",
+    "Farmington Hills mailbox installation",
+    "Novi mailbox installation",
+    "Rochester Hills mailbox installation",
+    "Sterling Heights mailbox installation",
+    "Shelby Township mailbox installation",
+    "Macomb Township mailbox installation",
+    "Clinton Township mailbox installation",
+    "Canton Township mailbox installation",
+    "Livonia mailbox installation",
+    "Grosse Pointe mailbox installation",
     "Oakland County mailbox service",
+    "Macomb County mailbox installation",
     "Wayne County mailbox installation",
-    "Macomb County mailbox repair",
     "residential mailbox installation",
-    "new mailbox installation",
     "mailbox post installation",
   ],
   openGraph: {
@@ -30,6 +36,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Metro Detroit Mailbox",
+    url: "https://metrodetroitmailbox.com",
+    images: [
+      {
+        url: "https://metrodetroitmailbox.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Metro Detroit Mailbox — Professional Installation & Repair",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Metro Detroit Mailbox | Mailbox Installation & Repair",
+    description:
+      "Professional mailbox installation and repair services across Metro Detroit. Call or text (734) 655-0305.",
+    images: ["https://metrodetroitmailbox.com/og-image.png"],
   },
   robots: {
     index: true,
@@ -58,7 +80,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
         <link
@@ -70,21 +92,25 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "LocalBusiness",
+              "@type": "HomeAndConstructionBusiness",
               name: "Metro Detroit Mailbox",
               description:
                 "Professional mailbox installation and repair services in Metro Detroit.",
+              url: "https://metrodetroitmailbox.com",
               telephone: "+1-734-655-0305",
               email: "metrodetroitmailbox@gmail.com",
+              priceRange: "$$",
               areaServed: [
-                "Royal Oak, MI",
-                "Birmingham, MI",
                 "Troy, MI",
-                "Bloomfield Hills, MI",
-                "Rochester, MI",
-                "Novi, MI",
                 "Farmington Hills, MI",
-                "West Bloomfield, MI",
+                "Novi, MI",
+                "Rochester Hills, MI",
+                "Sterling Heights, MI",
+                "Shelby Township, MI",
+                "Macomb Township, MI",
+                "Clinton Township, MI",
+                "Canton Township, MI",
+                "Livonia, MI",
                 "Grosse Pointe, MI",
               ],
               serviceType: [
@@ -97,6 +123,65 @@ export default function RootLayout({
                 addressRegion: "MI",
                 addressCountry: "US",
               },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "Do I need to buy the mailbox first?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Not necessarily. If you already have a mailbox you want installed, we're happy to install it. If you don't have one yet, we can help you find an option that works best for your home and neighborhood, then install it for you.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "How much does mailbox installation cost?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Pricing varies by job — it depends on your location, supplies needed, and the time required to do the work right. Most jobs range from $200–$500, though some are more and some are less. Our goal is to give you the best experience and high quality service, regardless of the price or job size.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Do you call 811 before digging?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes, always. We call 811 and schedule them to mark underground utilities a few days before your installation date — at no extra charge to you.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "How long does mailbox installation take?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Most installations take 3–4 hours from start to finish.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Do you haul away my old mailbox?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes. We remove your old mailbox, haul away all debris, and leave your yard clean when the job is done.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What areas do you serve?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "We serve homeowners throughout Oakland, Wayne, and Macomb counties — including Troy, Farmington Hills, Novi, Rochester Hills, Sterling Heights, Shelby Township, Macomb Township, Clinton Township, Canton Township, Livonia, Grosse Pointe, and surrounding Metro Detroit communities.",
+                  },
+                },
+              ],
             }),
           }}
         />

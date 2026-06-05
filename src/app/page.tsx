@@ -13,7 +13,7 @@ const services = [
     fallbackIcon: "fa-solid fa-box",
     title: "New Mailbox Installation",
     description:
-      "Already purchased your new mailbox? We'll take it from there. We install your mailbox and post in concrete, making sure everything is secure, level, and meets postal regulations. We always call 811 before digging (at no charge to you), haul away all trash and your old mailbox, and leave your yard clean.",
+      "Already have a mailbox? We'll install it. Need help picking one? We can help you find the right fit for your home and neighborhood, then install it. We set the post in concrete, make sure everything is secure, level, and meets postal regulations. We always call 811 before digging (at no charge to you), haul away all trash and your old mailbox, and leave your yard clean.",
   },
   {
     icon: "fa-solid fa-wrench",
@@ -45,18 +45,50 @@ const processSteps = [
   },
 ];
 
+const faqs = [
+  {
+    question: "Do I need to buy the mailbox first?",
+    answer:
+      "Not necessarily. If you already have a mailbox you want installed, we're happy to install it. If you don't have one yet, we can help you find an option that works best for your home and neighborhood, then install it for you.",
+  },
+  {
+    question: "How much does installation cost?",
+    answer:
+      "Pricing varies by job — it depends on your location, supplies needed, and the time required to do the work right. Most jobs range from $200–$500, though some are more and some are less. Our goal is to give you the best experience and high quality service, regardless of the price or job size.",
+  },
+  {
+    question: "Do you call 811 before digging?",
+    answer:
+      "Yes, always — at no extra charge. We call 811 and schedule them to mark underground utilities a few days before your installation date.",
+  },
+  {
+    question: "How long does installation take?",
+    answer: "Most installations take 3–4 hours from start to finish.",
+  },
+  {
+    question: "Do you haul away my old mailbox?",
+    answer:
+      "Yes. We remove your old mailbox, haul away all debris, and leave your yard clean when the job is done.",
+  },
+  {
+    question: "What areas do you serve?",
+    answer:
+      "We serve homeowners throughout Oakland, Wayne, and Macomb counties — including Troy, Farmington Hills, Novi, Rochester Hills, Sterling Heights, Shelby Township, Macomb Township, Clinton Township, Canton Township, Livonia, Grosse Pointe, and surrounding Metro Detroit communities.",
+  },
+];
+
 const serviceAreas = [
-  "Royal Oak",
-  "Birmingham",
-  "Troy",
-  "Bloomfield Hills",
-  "Rochester",
-  "Novi",
+  "Canton Township",
+  "Clinton Township",
   "Farmington Hills",
-  "West Bloomfield",
   "Grosse Pointe",
-  "Sterling Heights",
+  "Livonia",
+  "Macomb Township",
+  "Novi",
+  "Rochester Hills",
   "Shelby Township",
+  "Sterling Heights",
+  "Troy",
   "And More!",
 ];
 
@@ -89,14 +121,13 @@ export default function Home() {
             <i className="fa-solid fa-envelope text-gold text-xl"></i>
             <span
               className="text-xl font-semibold tracking-wide"
-              style={{ fontFamily: "Playfair Display, serif" }}
-            >
+                         >
               Metro Detroit <span className="text-gold">MAILBOX</span>
             </span>
           </a>
 
           <div className="hidden lg:flex items-center gap-8">
-            {["Home", "Services", "Service Areas", "Contact"].map(
+            {["Home", "Services", "Service Areas", "FAQ", "Contact"].map(
               (item) => (
                 <a
                   key={item}
@@ -129,7 +160,7 @@ export default function Home() {
         {isMobileMenuOpen && (
           <div className="lg:hidden bg-primary/98 backdrop-blur-md border-t border-white/10 py-4">
             <div className="flex flex-col items-center gap-4">
-              {["Home", "Services", "Service Areas", "Contact"].map(
+              {["Home", "Services", "Service Areas", "FAQ", "Contact"].map(
                 (item) => (
                   <a
                     key={item}
@@ -166,15 +197,14 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-5 text-center pt-20">
           <h1
             className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6"
-            style={{ fontFamily: "Playfair Display, serif" }}
-          >
+                     >
             Professional{" "}
             <span className="text-gold">Mailbox Installation</span> & Repair
           </h1>
           <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            You buy the mailbox that best fits your home — we install it right.
-            Professional mailbox installation and repair services across Metro
-            Detroit.
+            Have a mailbox or need help picking one? We handle the installation
+            either way. Professional mailbox installation and repair services
+            across Metro Detroit.
           </p>
 
           {/* Contact info prominently in hero */}
@@ -210,13 +240,13 @@ export default function Home() {
             </span>
             <h2
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-3 mb-5"
-              style={{ fontFamily: "Playfair Display, serif" }}
-            >
+                         >
               Our Services
             </h2>
             <p className="text-gray-500 max-w-xl mx-auto text-lg">
-              You purchase the mailbox — we handle the installation and repair.
-              Simple, reliable service for homeowners across Metro Detroit.
+              Already have a mailbox? We install it. Need help choosing one? We
+              can help with that too. Simple, reliable service for homeowners
+              across Metro Detroit.
             </p>
           </div>
 
@@ -233,8 +263,7 @@ export default function Home() {
                 </div>
                 <h3
                   className="text-xl md:text-2xl font-bold text-primary mb-4"
-                  style={{ fontFamily: "Playfair Display, serif" }}
-                >
+>
                   {service.title}
                 </h3>
                 <p className="text-gray-500 leading-relaxed">
@@ -248,8 +277,7 @@ export default function Home() {
           <div className="mt-20">
             <h3
               className="text-2xl md:text-3xl font-bold text-primary text-center mb-12"
-              style={{ fontFamily: "Playfair Display, serif" }}
-            >
+                         >
               How It Works
             </h3>
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -263,8 +291,7 @@ export default function Home() {
                   </div>
                   <h4
                     className="text-lg font-bold text-primary mb-2"
-                    style={{ fontFamily: "Playfair Display, serif" }}
-                  >
+                                     >
                     {step.title}
                   </h4>
                   <p className="text-gray-500 text-sm leading-relaxed">
@@ -287,8 +314,7 @@ export default function Home() {
               </span>
               <h2
                 className="text-3xl md:text-4xl font-bold text-primary mt-3 mb-5"
-                style={{ fontFamily: "Playfair Display, serif" }}
-              >
+                             >
                 Serving Metro Detroit
               </h2>
               <p className="text-gray-500 text-lg mb-8 leading-relaxed">
@@ -309,8 +335,7 @@ export default function Home() {
               <i className="fa-solid fa-map-location-dot text-gold text-6xl mb-6"></i>
               <h3
                 className="text-2xl font-bold text-white mb-3"
-                style={{ fontFamily: "Playfair Display, serif" }}
-              >
+                             >
                 Oakland, Wayne & Macomb Counties
               </h3>
               <p className="text-white/70">
@@ -318,6 +343,34 @@ export default function Home() {
                 area.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-20 md:py-28 bg-light-bg">
+        <div className="max-w-[1200px] mx-auto px-5">
+          <div className="text-center mb-16">
+            <span className="text-gold font-semibold text-sm tracking-widest uppercase">
+              Common Questions
+            </span>
+            <h2
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-3 mb-5"
+                         >
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {faqs.map((faq, i) => (
+              <div key={i} className="bg-white rounded-2xl p-8 shadow-md">
+                <h3
+                  className="text-lg font-bold text-primary mb-3"
+>
+                  {faq.question}
+                </h3>
+                <p className="text-gray-500 leading-relaxed text-sm">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -330,8 +383,7 @@ export default function Home() {
           </span>
           <h2
             className="text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-5"
-            style={{ fontFamily: "Playfair Display, serif" }}
-          >
+                     >
             Contact Us
           </h2>
           <p className="text-white/70 text-lg mb-12 max-w-lg mx-auto">
@@ -347,8 +399,7 @@ export default function Home() {
               <i className="fa-solid fa-phone text-gold text-4xl mb-4 group-hover:scale-110 transition-transform block"></i>
               <h3
                 className="text-xl font-bold mb-2"
-                style={{ fontFamily: "Playfair Display, serif" }}
-              >
+                             >
                 Call or Text
               </h3>
               <p className="text-gold text-lg font-semibold">{PHONE}</p>
@@ -364,8 +415,7 @@ export default function Home() {
               <i className="fa-solid fa-envelope text-gold text-4xl mb-4 group-hover:scale-110 transition-transform block"></i>
               <h3
                 className="text-xl font-bold mb-2"
-                style={{ fontFamily: "Playfair Display, serif" }}
-              >
+                             >
                 Email Us
               </h3>
               <p className="text-gold text-lg font-semibold break-all">
@@ -388,8 +438,7 @@ export default function Home() {
                 <i className="fa-solid fa-envelope text-gold text-lg"></i>
                 <span
                   className="text-white text-lg font-semibold tracking-wide"
-                  style={{ fontFamily: "Playfair Display, serif" }}
-                >
+>
                   Metro Detroit{" "}
                   <span className="text-gold">MAILBOX</span>
                 </span>
@@ -455,9 +504,10 @@ export default function Home() {
               All rights reserved.
             </p>
             <p className="text-white/30 text-xs mt-2">
-              Serving Royal Oak, Birmingham, Troy, Bloomfield Hills, Rochester,
-              Novi, Farmington Hills, West Bloomfield, Grosse Pointe, and
-              surrounding Metro Detroit communities.
+              Serving Troy, Farmington Hills, Novi, Rochester Hills, Sterling
+              Heights, Shelby Township, Macomb Township, Clinton Township,
+              Canton Township, Livonia, Grosse Pointe, and surrounding Metro
+              Detroit communities.
             </p>
             <p className="text-white/30 text-xs mt-3">
               Website built by{" "}

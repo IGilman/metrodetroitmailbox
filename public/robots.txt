@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://metrodetroitmailboxinstall.com/sitemap.xml
+Sitemap: https://metrodetroitmailbox.com/sitemap.xml
