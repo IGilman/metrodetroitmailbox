@@ -73,7 +73,7 @@ const faqs = [
   {
     question: "What areas do you serve?",
     answer:
-      "We serve homeowners throughout Oakland, Wayne, and Macomb counties — including Troy, Farmington Hills, Novi, Rochester Hills, Sterling Heights, Shelby Township, Macomb Township, Clinton Township, Canton Township, Livonia, Grosse Pointe, and surrounding Metro Detroit communities.",
+      "We serve homeowners throughout Oakland, Wayne, Macomb, Livingston, and Washtenaw counties — including Troy, Farmington Hills, Novi, Rochester Hills, Sterling Heights, Shelby Township, Macomb Township, Clinton Township, Canton Township, Livonia, Grosse Pointe, Brighton, Howell, Ann Arbor, Ypsilanti, and surrounding Metro Detroit communities.",
   },
 ];
 
@@ -89,6 +89,10 @@ const serviceAreas = [
   "Shelby Township",
   "Sterling Heights",
   "Troy",
+  "Brighton",
+  "Howell",
+  "Ann Arbor",
+  "Ypsilanti",
   "And More!",
 ];
 
@@ -319,8 +323,9 @@ export default function Home() {
               </h2>
               <p className="text-gray-500 text-lg mb-8 leading-relaxed">
                 We provide professional mailbox installation and repair services
-                throughout Oakland, Wayne, and Macomb counties. If you&apos;re in
-                the Metro Detroit area, we&apos;ve got you covered.
+                throughout Oakland, Wayne, Macomb, Livingston, and Washtenaw
+                counties. If you&apos;re in the Metro Detroit area, we&apos;ve
+                got you covered.
               </p>
               <div className="grid grid-cols-2 gap-3">
                 {serviceAreas.map((area) => (
@@ -336,7 +341,7 @@ export default function Home() {
               <h3
                 className="text-2xl font-bold text-white mb-3"
                              >
-                Oakland, Wayne & Macomb Counties
+                Oakland, Wayne, Macomb, Livingston & Washtenaw Counties
               </h3>
               <p className="text-white/70">
                 Professional mailbox services across the greater Metro Detroit
@@ -506,8 +511,8 @@ export default function Home() {
             <p className="text-white/30 text-xs mt-2">
               Serving Troy, Farmington Hills, Novi, Rochester Hills, Sterling
               Heights, Shelby Township, Macomb Township, Clinton Township,
-              Canton Township, Livonia, Grosse Pointe, and surrounding Metro
-              Detroit communities.
+              Canton Township, Livonia, Grosse Pointe, Brighton, Howell, Ann
+              Arbor, Ypsilanti, and surrounding Metro Detroit communities.
             </p>
             <p className="text-white/30 text-xs mt-3">
               Website built by{" "}
