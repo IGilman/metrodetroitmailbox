@@ -13,7 +13,7 @@ const services = [
     fallbackIcon: "fa-solid fa-box",
     title: "New Mailbox Installation",
     description:
-      "Already have a mailbox? We'll install it. Need help picking one? We can help you find the right fit for your home and neighborhood, then install it. We set the post in concrete, make sure everything is secure, level, and meets postal regulations. We always call 811 before digging (at no charge to you), haul away all trash and your old mailbox, and leave your yard clean.",
+      "Already have a mailbox? We'll install it. Need help picking one? We can help you find the right fit for your home and neighborhood, then install it. We set the post securely and level, meeting postal regulations. We always call 811 before digging (at no charge to you), haul away all trash and your old mailbox, and leave your yard clean.",
   },
   {
     icon: "fa-solid fa-wrench",
@@ -40,7 +40,7 @@ const processSteps = [
   {
     step: "3",
     title: "Professional Installation",
-    description: "We install your mailbox post in concrete, clean up all trash, and haul away your old mailbox. Total installation usually takes 3–4 hours.",
+    description: "We install your mailbox post securely, clean up all trash, and haul away your old mailbox. Total installation usually takes 3–4 hours.",
     icon: "fa-solid fa-screwdriver-wrench",
   },
 ];
