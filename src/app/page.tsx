@@ -54,7 +54,7 @@ const faqs = [
   {
     question: "How much does installation cost?",
     answer:
-      "Pricing varies by job — it depends on your location, supplies needed, and the time required to do the work right. Most jobs range from $200–$500, though some are more and some are less. Our goal is to give you the best experience and high quality service, regardless of the price or job size.",
+      "Pricing varies by job — it depends on your location, supplies needed, and the time required to do the work right. Most jobs range from $200–$600, though some are more and some are less. Our goal is to give you the best experience and high quality service, regardless of the price or job size.",
   },
   {
     question: "Do you call 811 before digging?",
