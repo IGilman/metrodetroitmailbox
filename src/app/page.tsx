@@ -28,7 +28,7 @@ const processSteps = [
   {
     step: "1",
     title: "Get a Quote",
-    description: "Contact us and we'll agree on a price and schedule a date that works for you.",
+    description: "Contact us and send 3-5 photos of your mailbox & post — it helps us give you an accurate quote faster. We'll agree on a price and schedule a date that works for you.",
     icon: "fa-solid fa-handshake",
   },
   {
@@ -40,7 +40,7 @@ const processSteps = [
   {
     step: "3",
     title: "Professional Installation",
-    description: "We install your mailbox post securely, clean up all trash, and haul away your old mailbox. Total installation usually takes 3–4 hours.",
+    description: "We install your mailbox post securely, clean up all trash, and haul away your old mailbox. Total installation usually takes 2–4 hours.",
     icon: "fa-solid fa-screwdriver-wrench",
   },
 ];
@@ -63,12 +63,17 @@ const faqs = [
   },
   {
     question: "How long does installation take?",
-    answer: "Most installations take 3–4 hours from start to finish.",
+    answer: "Most jobs take 2–4 hours from start to finish.",
   },
   {
     question: "Do you haul away my old mailbox?",
     answer:
       "Yes. We remove your old mailbox, haul away all debris, and leave your yard clean when the job is done.",
+  },
+  {
+    question: "What should I include when I reach out for a quote?",
+    answer:
+      "Sending 3-5 photos of your mailbox & post along with your message helps us give you a faster, more accurate quote with less back-and-forth.",
   },
   {
     question: "What areas do you serve?",
@@ -230,7 +235,7 @@ export default function Home() {
           </div>
           <p className="text-white/60 text-sm">
             <i className="fa-solid fa-message mr-2"></i>
-            Call or text anytime
+            Call or text anytime — send 3-5 photos of your mailbox & post for a faster quote
           </p>
         </div>
       </section>
@@ -393,7 +398,9 @@ export default function Home() {
           </h2>
           <p className="text-white/70 text-lg mb-12 max-w-lg mx-auto">
             Ready to get your mailbox installed or repaired? Reach out by phone,
-            text, or email — we&apos;d love to hear from you.
+            text, or email — we&apos;d love to hear from you. For the fastest,
+            most accurate quote, send us 3-5 photos of your mailbox & post
+            when you reach out.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-6 max-w-xl mx-auto">

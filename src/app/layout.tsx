@@ -173,7 +173,7 @@ export default function RootLayout({
                   name: "How long does mailbox installation take?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Most installations take 3–4 hours from start to finish.",
+                    text: "Most jobs take 2–4 hours from start to finish.",
                   },
                 },
                 {
@@ -182,6 +182,14 @@ export default function RootLayout({
                   acceptedAnswer: {
                     "@type": "Answer",
                     text: "Yes. We remove your old mailbox, haul away all debris, and leave your yard clean when the job is done.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What should I include when I reach out for a quote?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Sending 3-5 photos of your mailbox & post along with your message helps us give you a faster, more accurate quote with less back-and-forth.",
                   },
                 },
                 {
