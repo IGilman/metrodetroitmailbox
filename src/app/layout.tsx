@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     url: "https://metrodetroitmailbox.com",
     images: [
       {
-        url: "https://metrodetroitmailbox.com/og-image.png",
+        url: "https://metrodetroitmailbox.com/og-image.png?v=2",
         width: 1200,
         height: 630,
         alt: "Metro Detroit Mailbox — Professional Installation & Repair",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "Metro Detroit Mailbox | Mailbox Installation & Repair",
     description:
       "Professional mailbox installation and repair services across Metro Detroit. Call or text (734) 655-0305.",
-    images: ["https://metrodetroitmailbox.com/og-image.png"],
+    images: ["https://metrodetroitmailbox.com/og-image.png?v=2"],
   },
   robots: {
     index: true,
@@ -70,7 +70,12 @@ export const metadata: Metadata = {
     canonical: "https://metrodetroitmailbox.com",
   },
   icons: {
-    icon: "/favicon.svg?v=2",
+    icon: [
+      { url: "/favicon.svg?v=2", type: "image/svg+xml" },
+      { url: "/favicon-96x96.png?v=2", sizes: "96x96", type: "image/png" },
+      { url: "/favicon.ico?v=2", sizes: "48x48" },
+    ],
+    apple: { url: "/apple-touch-icon.png?v=2", sizes: "180x180" },
   },
 };
 
@@ -107,7 +112,7 @@ export default function RootLayout({
               description:
                 "Professional mailbox installation and repair services in Metro Detroit. We install mailboxes from any brand and are an authorized installer partner for Mail Boss, Post & Porch, and Whitehall.",
               url: "https://metrodetroitmailbox.com",
-              image: "https://metrodetroitmailbox.com/og-image.png",
+              image: "https://metrodetroitmailbox.com/og-image.png?v=2",
               telephone: "+1-734-655-0305",
               email: "metrodetroitmailbox@gmail.com",
               priceRange: "$$",
