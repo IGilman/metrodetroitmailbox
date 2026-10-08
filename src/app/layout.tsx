@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     canonical: "https://metrodetroitmailbox.com",
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: "/favicon.svg?v=2",
   },
 };
 

@@ -7,9 +7,24 @@ const PHONE_LINK = "tel:+17346550305";
 const EMAIL = "metrodetroitmailbox@gmail.com";
 const EMAIL_LINK = "mailto:metrodetroitmailbox@gmail.com";
 
+function MailboxIcon({ className = "w-11 h-11 text-white" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      fill="currentColor"
+      aria-hidden="true"
+      className={className}
+    >
+      {/* Bootstrap Icons "mailbox2-flag" (MIT License) */}
+      <path d="M10.5 8.5V3.707l.854-.853A.5.5 0 0 0 11.5 2.5v-2A.5.5 0 0 0 11 0H9.5a.5.5 0 0 0-.5.5v8z" />
+      <path d="M4 3h4v1H6.646A4 4 0 0 1 8 7v6h7V7a3 3 0 0 0-3-3V3a4 4 0 0 1 4 4v6a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V7a4 4 0 0 1 4-4m.585 4.157C4.836 7.264 5 7.334 5 7a1 1 0 0 0-2 0c0 .334.164.264.415.157C3.58 7.087 3.782 7 4 7s.42.086.585.157" />
+    </svg>
+  );
+}
+
 const services = [
   {
-    icon: "fa-solid fa-mailbox",
+    customIcon: <MailboxIcon />,
     fallbackIcon: "fa-solid fa-box",
     title: "New Mailbox Installation",
     description:
@@ -17,7 +32,6 @@ const services = [
     link: { href: "#brands", label: "See our brand partners" },
   },
   {
-    icon: "fa-solid fa-wrench",
     fallbackIcon: "fa-solid fa-wrench",
     title: "Mailbox Repair",
     description:
@@ -207,7 +221,7 @@ export default function Home() {
             href="#home"
             className="flex items-center gap-3 text-white no-underline"
           >
-            <i className="fa-solid fa-envelope text-gold text-xl"></i>
+            <MailboxIcon className="w-7 h-7 text-gold" />
             <span
               className="text-xl font-semibold tracking-wide"
                          >
@@ -346,9 +360,11 @@ export default function Home() {
                 className="bg-white rounded-2xl p-10 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center group"
               >
                 <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-gold group-hover:to-gold-light transition-all duration-300">
-                  <i
-                    className={`${service.fallbackIcon} text-3xl text-white`}
-                  ></i>
+                  {service.customIcon ?? (
+                    <i
+                      className={`${service.fallbackIcon} text-3xl text-white`}
+                    ></i>
+                  )}
                 </div>
                 <h3
                   className="text-xl md:text-2xl font-bold text-primary mb-4"
@@ -587,7 +603,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-10 mb-10">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <i className="fa-solid fa-envelope text-gold text-lg"></i>
+                <MailboxIcon className="w-6 h-6 text-gold" />
                 <span
                   className="text-white text-lg font-semibold tracking-wide"
 >
