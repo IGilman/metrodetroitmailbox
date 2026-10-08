@@ -14,6 +14,7 @@ const services = [
     title: "New Mailbox Installation",
     description:
       "Already have a mailbox? We'll install it. Need help picking one? We can help you find the right fit for your home and neighborhood, then install it. We set the post securely and level, meeting postal regulations. We always call 811 before digging (at no charge to you), haul away all trash and your old mailbox, and leave your yard clean.",
+    link: { href: "#brands", label: "See our brand partners" },
   },
   {
     icon: "fa-solid fa-wrench",
@@ -48,13 +49,67 @@ const processSteps = [
 const faqs = [
   {
     question: "Do I need to buy the mailbox first?",
-    answer:
-      "Not necessarily. If you already have a mailbox you want installed, we're happy to install it. If you don't have one yet, we can help you find an option that works best for your home and neighborhood, then install it for you.",
+    answer: (
+      <>
+        Not necessarily. If you already have a mailbox you want installed,
+        we&apos;re happy to install it. If you don&apos;t have one yet, we can
+        help you find an option that works best for your home and
+        neighborhood, then install it for you — including options from{" "}
+        <a
+          href="#brands"
+          className="text-primary font-semibold underline hover:text-gold"
+        >
+          our brand partners
+        </a>
+        .
+      </>
+    ),
   },
   {
     question: "How much does installation cost?",
     answer:
       "Pricing varies by job — it depends on your location, supplies needed, and the time required to do the work right. Most jobs range from $200–$600, though some are more and some are less. Our goal is to give you the best experience and high quality service, regardless of the price or job size.",
+  },
+  {
+    question: "Can I get a discount on my mailbox?",
+    answer: (
+      <>
+        Yes — we&apos;re an authorized installer partner with{" "}
+        <a
+          href="https://mailboss.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary font-semibold underline hover:text-gold"
+        >
+          Mail Boss
+        </a>
+        ,{" "}
+        <a
+          href="https://www.whitehallproducts.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary font-semibold underline hover:text-gold"
+        >
+          Whitehall
+        </a>
+        , and{" "}
+        <a
+          href="https://postandporch.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary font-semibold underline hover:text-gold"
+        >
+          Post & Porch
+        </a>{" "}
+        at the moment. If you see a mailbox and/or post you like from one of
+        these three companies, let us know and we can price it out for you!{" "}
+        <strong className="text-primary">
+          We still install mailboxes from any brand
+        </strong>{" "}
+        — installer pricing just
+        applies to these three partners for now.
+      </>
+    ),
   },
   {
     question: "Do you call 811 before digging?",
@@ -79,6 +134,31 @@ const faqs = [
     question: "What areas do you serve?",
     answer:
       "We serve homeowners throughout Oakland, Wayne, Macomb, Livingston, and Washtenaw counties — including Troy, Farmington Hills, Novi, Rochester Hills, Sterling Heights, Shelby Township, Macomb Township, Clinton Township, Canton Township, Livonia, Grosse Pointe, Brighton, Howell, Ann Arbor, Ypsilanti, and surrounding Metro Detroit communities.",
+  },
+];
+
+const brandPartners = [
+  {
+    name: "Mail Boss",
+    logo: "/logos/mailboss-logo.jpg",
+    tagline: "Locking & non-locking security mailboxes",
+    location: "Based in Washington",
+    url: "https://mailboss.com/",
+  },
+  {
+    name: "Post & Porch",
+    logo: "/logos/post-and-porch-logo.jpg",
+    tagline: "Modern mailbox designs",
+    location: "Based in Utah",
+    url: "https://postandporch.com/",
+  },
+  {
+    name: "Whitehall",
+    logo: "/logos/whitehall-logo.jpeg",
+    tagline: "Handcrafted since 1941",
+    location: "Based in Michigan",
+    badge: "Michigan-Based",
+    url: "https://www.whitehallproducts.com/",
   },
 ];
 
@@ -136,7 +216,7 @@ export default function Home() {
           </a>
 
           <div className="hidden lg:flex items-center gap-8">
-            {["Home", "Services", "Service Areas", "FAQ", "Contact"].map(
+            {["Home", "Services", "Brands", "Service Areas", "FAQ", "Contact"].map(
               (item) => (
                 <a
                   key={item}
@@ -169,7 +249,7 @@ export default function Home() {
         {isMobileMenuOpen && (
           <div className="lg:hidden bg-primary/98 backdrop-blur-md border-t border-white/10 py-4">
             <div className="flex flex-col items-center gap-4">
-              {["Home", "Services", "Service Areas", "FAQ", "Contact"].map(
+              {["Home", "Services", "Brands", "Service Areas", "FAQ", "Contact"].map(
                 (item) => (
                   <a
                     key={item}
@@ -278,6 +358,15 @@ export default function Home() {
                 <p className="text-gray-500 leading-relaxed">
                   {service.description}
                 </p>
+                {service.link && (
+                  <a
+                    href={service.link.href}
+                    className="inline-block mt-5 text-primary font-semibold text-sm hover:text-gold transition-colors"
+                  >
+                    {service.link.label}
+                    <i className="fa-solid fa-arrow-right ml-2"></i>
+                  </a>
+                )}
               </article>
             ))}
           </div>
@@ -313,8 +402,59 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Brands Section */}
+      <section id="brands" className="py-16 md:py-20 bg-white">
+        <div className="max-w-[1200px] mx-auto px-5">
+          <div className="text-center mb-12">
+            <span className="text-gold font-semibold text-sm tracking-widest uppercase">
+              Our Partners
+            </span>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary mt-3 mb-5">
+              Authorized Dealer For
+            </h2>
+            <p className="text-gray-500 max-w-xl mx-auto text-lg">
+              <strong className="text-primary">
+                We install mailboxes from any brand
+              </strong>{" "}
+              — these are the
+              manufacturers we partner with directly for installer pricing at
+              the moment.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+            {brandPartners.map((brand) => (
+              <a
+                key={brand.name}
+                href={brand.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative bg-light-bg rounded-2xl p-8 flex flex-col items-center text-center shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline cursor-pointer"
+              >
+                {brand.badge && (
+                  <span className="absolute -top-3 bg-gradient-to-r from-gold to-gold-light text-primary text-xs font-bold tracking-wide py-1 px-3 rounded-full shadow">
+                    {brand.badge}
+                  </span>
+                )}
+                <div className="w-full h-24 flex items-center justify-center mb-4">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={brand.logo}
+                    alt={`${brand.name} logo`}
+                    loading="lazy"
+                    className="max-h-24 max-w-full object-contain rounded"
+                  />
+                </div>
+                <p className="text-gray-500 text-sm">{brand.tagline}</p>
+                <p className="text-gray-400 text-xs mt-1">{brand.location}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Service Areas Section */}
-      <section id="service-areas" className="py-20 md:py-28 bg-white">
+      <section id="service-areas" className="py-20 md:py-28 bg-light-bg">
         <div className="max-w-[1200px] mx-auto px-5">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -358,7 +498,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-20 md:py-28 bg-light-bg">
+      <section id="faq" className="py-20 md:py-28 bg-white">
         <div className="max-w-[1200px] mx-auto px-5">
           <div className="text-center mb-16">
             <span className="text-gold font-semibold text-sm tracking-widest uppercase">
@@ -372,7 +512,7 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {faqs.map((faq, i) => (
-              <div key={i} className="bg-white rounded-2xl p-8 shadow-md">
+              <div key={i} className="bg-light-bg rounded-2xl p-8 shadow-md">
                 <h3
                   className="text-lg font-bold text-primary mb-3"
 >
@@ -469,6 +609,7 @@ export default function Home() {
                 {[
                   "Home",
                   "Services",
+                  "Brands",
                   "Service Areas",
                   "Contact",
                 ].map((item) => (

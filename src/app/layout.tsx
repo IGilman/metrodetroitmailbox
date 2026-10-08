@@ -6,7 +6,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Metro Detroit Mailbox | Professional Mailbox Installation & Repair",
   description:
-    "Professional mailbox installation and repair services in Metro Detroit. Serving Royal Oak, Birmingham, Troy, Bloomfield Hills, and surrounding areas. Call or text (734) 655-0305.",
+    "Professional mailbox installation and repair across Oakland, Wayne, Macomb, Livingston & Washtenaw counties. Authorized Mail Boss, Post & Porch & Whitehall installer. Call or text (734) 655-0305.",
   keywords: [
     "mailbox installation",
     "mailbox repair",
@@ -34,6 +34,9 @@ export const metadata: Metadata = {
     "Washtenaw County mailbox installation",
     "residential mailbox installation",
     "mailbox post installation",
+    "Mail Boss mailbox installer",
+    "Whitehall mailbox installer",
+    "Post & Porch mailbox installer",
   ],
   openGraph: {
     title: "Metro Detroit Mailbox | Mailbox Installation & Repair",
@@ -100,8 +103,9 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "HomeAndConstructionBusiness",
               name: "Metro Detroit Mailbox",
+              legalName: "Metro Detroit Mailbox LLC",
               description:
-                "Professional mailbox installation and repair services in Metro Detroit.",
+                "Professional mailbox installation and repair services in Metro Detroit. We install mailboxes from any brand and are an authorized installer partner for Mail Boss, Post & Porch, and Whitehall.",
               url: "https://metrodetroitmailbox.com",
               image: "https://metrodetroitmailbox.com/og-image.png",
               telephone: "+1-734-655-0305",
@@ -149,7 +153,7 @@ export default function RootLayout({
                   name: "Do I need to buy the mailbox first?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Not necessarily. If you already have a mailbox you want installed, we're happy to install it. If you don't have one yet, we can help you find an option that works best for your home and neighborhood, then install it for you.",
+                    text: "Not necessarily. If you already have a mailbox you want installed, we're happy to install it. If you don't have one yet, we can help you find an option that works best for your home and neighborhood, then install it for you — including options from our brand partners Mail Boss, Post & Porch, and Whitehall.",
                   },
                 },
                 {
@@ -158,6 +162,14 @@ export default function RootLayout({
                   acceptedAnswer: {
                     "@type": "Answer",
                     text: "Pricing varies by job — it depends on your location, supplies needed, and the time required to do the work right. Most jobs range from $200–$600, though some are more and some are less. Our goal is to give you the best experience and high quality service, regardless of the price or job size.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Can I get a discount on my mailbox?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes — we're an authorized installer partner with Mail Boss, Whitehall, and Post & Porch at the moment. If you see a mailbox and/or post you like from one of these three companies, let us know and we can price it out for you! We still install mailboxes from any brand — installer pricing just applies to these three partners for now.",
                   },
                 },
                 {
