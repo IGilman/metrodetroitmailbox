@@ -209,7 +209,7 @@ export default function RootLayout({
                   name: "What should I include when I reach out for a quote?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Sending 3-5 photos of your mailbox & post along with your message helps us give you a faster, more accurate quote with less back-and-forth.",
+                    text: "Sending 3-5 photos of your existing mailbox & post along with your message helps us give you a faster, more accurate quote with less back-and-forth.",
                   },
                 },
                 {
