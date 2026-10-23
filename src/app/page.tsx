@@ -99,14 +99,14 @@ const faqs = [
         </a>
         ,{" "}
         <a
-          href="https://www.whitehallproducts.com/"
+          href="https://www.mailboxes.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-primary font-semibold underline hover:text-gold"
         >
-          Whitehall
+          Mailboxes.com
         </a>
-        , and{" "}
+        ,{" "}
         <a
           href="https://postandporch.com/"
           target="_blank"
@@ -114,14 +114,23 @@ const faqs = [
           className="text-primary font-semibold underline hover:text-gold"
         >
           Post & Porch
+        </a>
+        , and{" "}
+        <a
+          href="https://www.whitehallproducts.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary font-semibold underline hover:text-gold"
+        >
+          Whitehall
         </a>{" "}
         at the moment. If you see a mailbox and/or post you like from one of
-        these three companies, let us know and we can price it out for you!{" "}
+        these four companies, let us know and we can price it out for you!{" "}
         <strong className="text-primary">
           We still install mailboxes from any brand
         </strong>{" "}
         — installer pricing just
-        applies to these three partners for now.
+        applies to these four partners for now.
       </>
     ),
   },
@@ -160,16 +169,23 @@ const brandPartners = [
     url: "https://mailboss.com/",
   },
   {
+    name: "Mailboxes.com",
+    logo: "/logos/mailboxes-com-logo.png",
+    tagline: "Cluster, commercial & residential mailboxes",
+    location: "Based in California",
+    url: "https://www.mailboxes.com/",
+  },
+  {
     name: "Post & Porch",
     logo: "/logos/post-and-porch-logo.jpg",
-    tagline: "Modern mailbox designs",
+    tagline: "Modern and durable mailboxes",
     location: "Based in Utah",
     url: "https://postandporch.com/",
   },
   {
     name: "Whitehall",
     logo: "/logos/whitehall-logo.jpeg",
-    tagline: "Handcrafted since 1941",
+    tagline: "Elegant, functional and durable mailboxes",
     location: "Based in Michigan",
     badge: "Michigan-Based",
     url: "https://www.whitehallproducts.com/",
@@ -425,20 +441,12 @@ export default function Home() {
             <span className="text-gold font-semibold text-sm tracking-widest uppercase">
               Our Partners
             </span>
-            <h2 className="text-2xl md:text-3xl font-bold text-primary mt-3 mb-5">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary mt-3">
               Authorized Dealer For
             </h2>
-            <p className="text-gray-500 max-w-xl mx-auto text-lg">
-              <strong className="text-primary">
-                We install mailboxes from any brand
-              </strong>{" "}
-              — these are the
-              manufacturers we partner with directly for installer pricing at
-              the moment.
-            </p>
           </div>
 
-          <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {brandPartners.map((brand) => (
               <a
                 key={brand.name}
@@ -466,6 +474,14 @@ export default function Home() {
               </a>
             ))}
           </div>
+
+          <p className="text-gray-500 max-w-xl mx-auto text-lg text-center mt-10">
+            <strong className="text-primary">
+              We install mailboxes from any brand
+            </strong>{" "}
+            — these are the manufacturers we partner with directly for
+            installer pricing at the moment.
+          </p>
         </div>
       </section>
 
